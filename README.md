@@ -10,7 +10,7 @@ Folders:
 * software: C source code for the USB controller
 * src: hardware description of the NES
 
-To load a game:
+To load a game (by default the emulator loads Super Mario Bros):
 1. Download a NES ROM.
 2. Create a hex dump of the ROM using VSCode.
 3. Figure out the mapper information from the iNES header (https://wiki.nesdev.org/w/index.php/INES)
@@ -27,12 +27,12 @@ To run:
 6. Press "Run Configurations" then "Run." Once the NIOS-II console is showing the pressed keycodes, you can begin to play!
 
 Controls:
-SW[0]: CPU Reset (active low)
-WASD: Arrow keys
-J: A
-K: B
-I: Select
-O: Start
+- SW[0]: CPU Reset (active low)
+- WASD: Arrow keys
+- J: A
+- K: B
+- I: Select
+- O: Start
 
 Enjoy!
 -Ian D
