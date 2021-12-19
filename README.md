@@ -24,7 +24,8 @@ To run:
 2. Compile
 3. Program the FPGA. Make sure SW[0] is flipped on.
 5. Launch NIOS-II Build Tools for Eclipse, with working directory eclipse/
-6. Press "Run Configurations" then "Run." Once the NIOS-II console is showing the pressed keycodes, you can begin to play!
+6. Press "Run Configurations" then "Run." 
+Once the hex displays or the NIOS-II console is showing the pressed keycodes, you can begin to play!
 
 Controls:
 - SW[0]: CPU Reset (active low)
