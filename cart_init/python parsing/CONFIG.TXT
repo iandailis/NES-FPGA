@@ -1,6 +1,5 @@
 Nestest: No mirror, Start Address: 0xC000
 Donkey Kong: No mirror, Start Address: 0xC000
 Super Mario Bros: Vertical Mirror, Start Address: 0x8000
-PacMan: No mirror, Start Address: 0xC000
 Ice Climber: Horizontal Mirror, Start Address: 0xC000
 Kung Fu: Vertical Mirror, Start Address: 0x8000
