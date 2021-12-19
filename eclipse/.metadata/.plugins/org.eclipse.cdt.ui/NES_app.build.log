@@ -1,0 +1,6 @@
+16:47:59 **** Clean-only build of configuration Nios II for project NES_app ****
+make clean 
+[NES_app clean complete]
+
+16:48:00 Build Finished (took 1s.81ms)
+

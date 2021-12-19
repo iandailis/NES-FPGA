@@ -1,0 +1,1758 @@
+!SESSION 2021-11-16 16:36:00.441 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-16 16:38:16.327
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-11-16 16:47:50.725
+!MESSAGE Indexed 'NES_app_bsp' (75 sources, 65 headers) in 2.47 sec: 1,075 declarations; 2,016 references; 91 unresolved inclusions; 6 syntax errors; 169 unresolved names (5.2%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-11-16 16:47:59.905
+!MESSAGE Indexed 'NES_app' (75 sources, 65 headers) in 0.991 sec: 1,075 declarations; 2,016 references; 91 unresolved inclusions; 6 syntax errors; 169 unresolved names (5.2%)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2021-11-16 16:49:44.065
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:794)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete 'E:\quartus\projects\NES\software\NES_app_bsp\Makefile'.
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:310)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:390)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1835)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: E:\quartus\projects\NES\software\NES_app_bsp\Makefile.
+Contains: Could not delete 'E:\quartus\projects\NES\software\NES_app_bsp'.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2021-11-16 16:49:44.068
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2021-11-16 16:49:44.068
+!MESSAGE Could not delete 'E:\quartus\projects\NES\software\NES_app_bsp\Makefile'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:310)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:390)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1835)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: E:\quartus\projects\NES\software\NES_app_bsp\Makefile.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2021-11-16 16:49:44.068
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2021-11-16 16:49:44.068
+!MESSAGE Could not delete: E:\quartus\projects\NES\software\NES_app_bsp\Makefile.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2021-11-16 16:49:44.068
+!MESSAGE Could not delete 'E:\quartus\projects\NES\software\NES_app_bsp'.
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-11-16 16:52:41.291
+!MESSAGE Indexed 'NIOSIIe_app_bsp' (75 sources, 65 headers) in 1.26 sec: 1,075 declarations; 2,016 references; 91 unresolved inclusions; 6 syntax errors; 169 unresolved names (5.2%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-11-16 16:52:43.644
+!MESSAGE Indexed 'NIOSIIe_app' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 17:03:55.211
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 17:03:55.211
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x98 --id=0x0 --timestamp=1637101589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 17:03:59.321
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x98 --id=0x0 --timestamp=1637101589 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:39:35.722
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 20:39:37.110
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:39:37.117
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x98 --id=0x0 --timestamp=1637101589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:39:41.307
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x98 --id=0x0 --timestamp=1637101589 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:41:49.217
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 20:41:50.597
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:41:50.599
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x98 --id=0x0 --timestamp=1637101589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:41:54.781
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x98 --id=0x0 --timestamp=1637101589 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:45:05.896
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 20:45:07.318
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:45:07.318
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x98 --id=0x0 --timestamp=1637101589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:45:11.414
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x98 --id=0x0 --timestamp=1637101589 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:49:17.583
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 20:49:18.863
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:49:18.863
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x98 --id=0x0 --timestamp=1637101589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:49:23.260
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x98 --id=0x0 --timestamp=1637101589 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:51:43.262
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 20:51:44.653
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:51:44.653
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x98 --id=0x0 --timestamp=1637101589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:51:48.755
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x98 --id=0x0 --timestamp=1637101589 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:55:51.938
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 20:55:53.329
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:55:53.329
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x98 --id=0x0 --timestamp=1637101589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:55:57.381
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x98 --id=0x0 --timestamp=1637101589 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:57:41.867
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 20:57:43.243
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:57:43.243
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x98 --id=0x0 --timestamp=1637101589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 20:57:47.344
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x98 --id=0x0 --timestamp=1637101589 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:10:50.826
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 22:10:52.198
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:10:52.200
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:10:56.386
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:13:05.446
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 22:13:06.856
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:13:06.857
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:13:11.029
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:26:05.660
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 22:26:07.056
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:26:07.058
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:26:11.233
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:28:33.782
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 22:28:35.201
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:28:35.202
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:28:39.443
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:30:03.649
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 22:30:05.074
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:30:05.074
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:30:09.318
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY org.eclipse.cdt.ui 4 0 2021-11-16 22:36:09.202
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element main.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:484)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:573)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2021-11-16 22:36:09.203
+!MESSAGE Element main.c does not exist.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:36:43.628
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-16 22:36:45.082
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:36:45.084
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:36:49.461
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-16 22:42:08.584 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-16 22:42:16.839
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-16 22:42:33.675
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:46:38.848
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-16 22:46:43.061
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-17 23:12:07.714 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-17 23:21:55.567
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:18:19.239
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:18:23.375
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:20:04.538
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:20:06.005
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:20:10.082
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:24:23.827
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:24:25.258
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:24:29.433
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:25:53.456
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:25:54.932
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:25:59.018
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:45:19.935
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:45:24.244
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:46:36.860
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:46:38.352
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:46:42.607
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:47:35.112
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:47:43.696
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x208 --id=0x0 --timestamp=1637119592]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 00:47:50.850
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x208 --id=0x0 --timestamp=1637119592 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 01:08:34.347
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637218452]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 01:08:38.743
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637218452 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-18 01:08:45.061
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, --sidp=0x220, --id=0x0, --timestamp=1637218452, /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-11-18 01:08:45.105
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 01:17:24.497
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 01:17:28.780
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 01:21:08.617
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 01:21:10.190
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 01:21:14.623
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-18 12:41:41.892 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-18 12:42:21.716
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 12:44:27.551
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 12:44:31.607
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 12:48:16.264
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 12:48:18.098
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 12:48:22.899
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 12:52:14.955
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 12:52:19.055
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 13:01:02.780
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 13:01:07.075
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 13:06:49.850
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 13:06:54.117
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 13:14:41.234
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-18 13:14:45.455
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 16:21:35.306 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 16:22:01.574
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:27:59.054
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:28:02.362
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:29:43.002
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:29:44.258
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:29:47.584
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:31:22.306
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:31:25.616
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:32:03.936
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:32:05.183
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:32:08.608
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:34:36.634
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:34:37.864
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:34:41.184
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:35:54.169
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 17:35:57.521
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:18:57.631
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:18:58.948
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:19:06.018
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:20:03.408
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:20:04.662
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:20:11.692
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:21:25.228
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:21:26.610
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:21:33.683
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:47:54.942
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:47:58.223
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 18:51:41.308 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 18:51:45.801
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 18:51:55.963
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:55:04.772
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:55:08.061
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:56:03.568
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 18:56:06.832
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 19:02:10.845
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 19:02:14.174
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 19:02:58.865
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 19:03:02.119
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 19:07:19.945
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 19:07:23.187
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 19:08:56.719
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 19:08:59.937
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 20:17:09.918 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 20:18:29.339
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 20:18:39.673
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:19:41.615
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:19:44.880
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:20:17.034
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:20:20.337
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 20:22:22.714 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 20:22:49.055
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 20:22:58.926
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:24:14.642
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:24:17.874
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:28:40.693
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:28:47.732
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 20:41:46.348 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 20:41:51.977
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 20:42:03.230
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:44:26.371
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:44:29.664
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 20:45:47.473 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 20:45:51.664
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 20:46:01.699
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:46:20.828
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:46:24.120
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:50:33.095
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:50:36.381
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:56:23.239
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:56:26.501
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:57:57.270
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 20:58:00.544
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:18:46.295
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:18:49.023
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 21:25:54.705 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 21:25:58.237
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 21:26:09.905
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:28:41.572
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:28:44.296
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:31:39.473
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:31:42.193
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:37:32.997
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:37:35.719
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:41:10.153
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 21:41:12.876
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 22:09:54.168 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 22:10:00.880
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 22:10:10.868
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:10:43.329
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:10:46.061
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:15:45.944
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:15:47.036
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637219434]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:15:49.812
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637219434 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 22:22:41.769 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 22:22:45.091
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 22:22:56.800
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:28:58.680
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x240 --id=0x0 --timestamp=1637381995]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:29:01.406
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x240 --id=0x0 --timestamp=1637381995 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-19 22:32:22.260 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-19 22:32:26.511
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-19 22:32:36.449
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:35:52.762
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x240 --id=0x0 --timestamp=1637381995]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:35:55.482
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x240 --id=0x0 --timestamp=1637381995 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:44:38.675
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x240 --id=0x0 --timestamp=1637381995]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:44:41.433
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x240 --id=0x0 --timestamp=1637381995 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:54:41.088
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x240 --id=0x0 --timestamp=1637381995]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-19 22:54:43.841
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x240 --id=0x0 --timestamp=1637381995 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-20 23:28:59.509 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-20 23:29:50.341
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 00:41:51.321
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 00:41:54.700
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 00:48:48.098
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 00:48:49.351
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 00:48:52.652
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 00:54:55.644
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 00:54:56.850
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 00:55:00.136
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:00:21.864
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:00:23.094
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:00:26.424
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:02:34.665
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:02:35.880
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:02:39.169
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:35:01.647
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:35:04.995
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:54:21.034
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 01:54:24.334
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 02:08:04.363
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 02:08:05.564
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 02:08:08.871
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 02:09:39.484
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 02:09:40.706
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 02:09:43.954
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 02:20:38.416
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-21 02:20:41.689
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-21 23:50:40.961 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-21 23:51:14.970
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:02:17.756
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:02:21.112
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:07:43.802
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:07:47.119
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:08:40.439
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:08:47.478
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:13:31.664
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:13:32.917
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:13:39.971
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:27:41.137
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:27:44.369
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:32:04.867
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 00:32:08.150
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:10:55.405
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:10:58.683
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:16:47.266
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:16:50.546
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:21:30.062
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:21:33.362
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:31:16.099
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:31:19.303
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:32:36.721
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:32:38.002
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 02:32:45.074
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-22 20:13:42.326 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-22 20:14:16.680
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 20:14:40.346
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 20:14:43.671
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 20:17:16.697
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 20:17:17.910
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637475823]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 20:17:21.164
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637475823 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-22 22:42:12.819 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-22 22:42:27.884
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:00:01.446
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637642534]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:00:04.667
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637642534 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:01:31.563
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:01:32.818
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637642534]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:01:39.875
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637642534 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:03:35.770
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:03:36.976
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637642534]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:03:40.256
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637642534 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:20:31.075
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637642534]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:20:34.325
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637642534 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:37:03.980
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637642534]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:37:07.267
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637642534 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:38:00.025
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637642534]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-22 23:38:03.272
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637642534 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-23 12:53:16.515 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-23 12:55:11.199
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-23 12:55:36.309
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 13:02:53.236
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637693714]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 13:02:56.637
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637693714 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 13:07:30.785
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 13:07:32.002
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637693714]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 13:07:35.252
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637693714 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 15:24:21.261
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637693714]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 15:24:24.545
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637693714 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 19:40:30.194
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637693714]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-23 19:40:33.601
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637693714 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-24 00:21:16.957
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x280 --id=0x0 --timestamp=1637693714]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-24 00:21:20.400
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x280 --id=0x0 --timestamp=1637693714 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-11-24 14:28:06.094 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-11-24 14:28:42.157
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-24 15:13:15.241
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1637784072]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-11-24 15:13:18.881
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1637784072 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-12-10 01:23:23.368 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-10 01:24:06.028
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:02:46.949
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:02:50.416
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:12:35.050
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:12:38.267
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:18:37.588
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:18:40.886
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:28:44.476
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:28:47.792
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:35:37.466
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:35:40.737
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:48:59.441
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:49:02.691
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:57:56.649
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 02:57:59.980
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:05:19.428
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:05:22.798
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:12:36.932
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:12:38.153
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:12:41.494
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:14:26.187
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:14:27.411
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:14:30.668
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:29:56.009
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:29:59.265
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:45:50.696
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 03:45:53.997
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-12-10 16:18:18.909 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-10 16:18:56.946
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 16:20:11.341
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 16:20:14.643
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 16:42:18.666
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 16:42:21.964
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 20:04:53.112
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-10 20:04:57.329
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-12-12 01:59:25.891 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-12 02:00:35.224
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 02:02:40.882
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 02:02:44.196
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-12-12 14:29:19.528 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-12 14:29:48.697
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 14:32:14.949
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 14:32:18.256
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 17:49:39.534
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 17:49:42.809
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-12-18 20:29:24.846 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-18 20:29:38.658
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 20:31:01.917
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 20:31:05.219
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+!SESSION 2021-12-18 21:28:55.416 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization E:/quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-18 21:29:25.053
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.ui 4 0 2021-12-18 21:35:14.241
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element main.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:484)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:573)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2021-12-18 21:35:14.241
+!MESSAGE Element main.c does not exist.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 21:35:31.289
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 21:35:34.546
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 22:09:53.538
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 22:09:57.866
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 22:51:35.152
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 22:51:37.017
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 22:51:41.377
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 23:11:48.011
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x220 --id=0x0 --timestamp=1639120334]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-18 23:11:52.352
+!MESSAGE Executing: [E:/quartus/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x220 --id=0x0 --timestamp=1639120334 /cygdrive/e/quartus/projects/NES/software/NIOSIIe_app/NIOSIIe_app.elf]

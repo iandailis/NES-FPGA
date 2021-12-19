@@ -1,0 +1,226 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\quartus\projects\NES\qsys\NIOSIIe.qsys --block-symbol-file --output-directory=E:\quartus\projects\NES\qsys\NIOSIIe --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading qsys/NIOSIIe.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hex [altera_avalon_pio 18.1]
+Progress: Parameterizing module hex
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding key [altera_avalon_pio 18.1]
+Progress: Parameterizing module key
+Progress: Adding keycode [altera_avalon_pio 18.1]
+Progress: Parameterizing module keycode
+Progress: Adding led [altera_avalon_pio 18.1]
+Progress: Parameterizing module led
+Progress: Adding nes_pll [altpll 18.1]
+Progress: Parameterizing module nes_pll
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 18.1]
+Progress: Parameterizing module sdram
+Progress: Adding sdram_pll [altpll 18.1]
+Progress: Parameterizing module sdram_pll
+Progress: Adding spi_0 [altera_avalon_spi 18.1]
+Progress: Parameterizing module spi_0
+Progress: Adding sw [altera_avalon_pio 18.1]
+Progress: Parameterizing module sw
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Adding usb_gpx [altera_avalon_pio 18.1]
+Progress: Parameterizing module usb_gpx
+Progress: Adding usb_irq [altera_avalon_pio 18.1]
+Progress: Parameterizing module usb_irq
+Progress: Adding usb_rst [altera_avalon_pio 18.1]
+Progress: Parameterizing module usb_rst
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: NIOSIIe.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: NIOSIIe.key: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NIOSIIe.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: NIOSIIe.sw: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NIOSIIe.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: NIOSIIe.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: NIOSIIe.usb_gpx: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NIOSIIe.usb_irq: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\quartus\projects\NES\qsys\NIOSIIe.qsys --synthesis=VERILOG --output-directory=E:\quartus\projects\NES\qsys\NIOSIIe\synthesis --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading qsys/NIOSIIe.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hex [altera_avalon_pio 18.1]
+Progress: Parameterizing module hex
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding key [altera_avalon_pio 18.1]
+Progress: Parameterizing module key
+Progress: Adding keycode [altera_avalon_pio 18.1]
+Progress: Parameterizing module keycode
+Progress: Adding led [altera_avalon_pio 18.1]
+Progress: Parameterizing module led
+Progress: Adding nes_pll [altpll 18.1]
+Progress: Parameterizing module nes_pll
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 18.1]
+Progress: Parameterizing module sdram
+Progress: Adding sdram_pll [altpll 18.1]
+Progress: Parameterizing module sdram_pll
+Progress: Adding spi_0 [altera_avalon_spi 18.1]
+Progress: Parameterizing module spi_0
+Progress: Adding sw [altera_avalon_pio 18.1]
+Progress: Parameterizing module sw
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Adding usb_gpx [altera_avalon_pio 18.1]
+Progress: Parameterizing module usb_gpx
+Progress: Adding usb_irq [altera_avalon_pio 18.1]
+Progress: Parameterizing module usb_irq
+Progress: Adding usb_rst [altera_avalon_pio 18.1]
+Progress: Parameterizing module usb_rst
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: NIOSIIe.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: NIOSIIe.key: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NIOSIIe.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: NIOSIIe.sw: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NIOSIIe.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: NIOSIIe.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: NIOSIIe.usb_gpx: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NIOSIIe.usb_irq: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NIOSIIe: Generating NIOSIIe "NIOSIIe" for QUARTUS_SYNTH
+Info: Inserting clock-crossing logic between cmd_demux.src7 and cmd_mux_007.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src7 and cmd_mux_007.sink1
+Info: Inserting clock-crossing logic between rsp_demux_007.src0 and rsp_mux.sink7
+Info: Inserting clock-crossing logic between rsp_demux_007.src1 and rsp_mux_001.sink7
+Info: hex: Starting RTL generation for module 'NIOSIIe_hex'
+Info: hex:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSIIe_hex --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0002_hex_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0002_hex_gen//NIOSIIe_hex_component_configuration.pl  --do_build_sim=0  ]
+Info: hex: Done RTL generation for module 'NIOSIIe_hex'
+Info: hex: "NIOSIIe" instantiated altera_avalon_pio "hex"
+Info: jtag_uart_0: Starting RTL generation for module 'NIOSIIe_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=NIOSIIe_jtag_uart_0 --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0003_jtag_uart_0_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0003_jtag_uart_0_gen//NIOSIIe_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'NIOSIIe_jtag_uart_0'
+Info: jtag_uart_0: "NIOSIIe" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: key: Starting RTL generation for module 'NIOSIIe_key'
+Info: key:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSIIe_key --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0004_key_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0004_key_gen//NIOSIIe_key_component_configuration.pl  --do_build_sim=0  ]
+Info: key: Done RTL generation for module 'NIOSIIe_key'
+Info: key: "NIOSIIe" instantiated altera_avalon_pio "key"
+Info: keycode: Starting RTL generation for module 'NIOSIIe_keycode'
+Info: keycode:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSIIe_keycode --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0005_keycode_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0005_keycode_gen//NIOSIIe_keycode_component_configuration.pl  --do_build_sim=0  ]
+Info: keycode: Done RTL generation for module 'NIOSIIe_keycode'
+Info: keycode: "NIOSIIe" instantiated altera_avalon_pio "keycode"
+Info: led: Starting RTL generation for module 'NIOSIIe_led'
+Info: led:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSIIe_led --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0006_led_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0006_led_gen//NIOSIIe_led_component_configuration.pl  --do_build_sim=0  ]
+Info: led: Done RTL generation for module 'NIOSIIe_led'
+Info: led: "NIOSIIe" instantiated altera_avalon_pio "led"
+Info: nes_pll: "NIOSIIe" instantiated altpll "nes_pll"
+Info: nios2_gen2_0: "NIOSIIe" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'NIOSIIe_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=NIOSIIe_onchip_memory2_0 --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0009_onchip_memory2_0_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0009_onchip_memory2_0_gen//NIOSIIe_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'NIOSIIe_onchip_memory2_0'
+Info: onchip_memory2_0: "NIOSIIe" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: sdram: Starting RTL generation for module 'NIOSIIe_sdram'
+Info: sdram:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=NIOSIIe_sdram --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0010_sdram_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0010_sdram_gen//NIOSIIe_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Done RTL generation for module 'NIOSIIe_sdram'
+Info: sdram: "NIOSIIe" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: sdram_pll: "NIOSIIe" instantiated altpll "sdram_pll"
+Info: spi_0: Starting RTL generation for module 'NIOSIIe_spi_0'
+Info: spi_0:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=NIOSIIe_spi_0 --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0013_spi_0_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0013_spi_0_gen//NIOSIIe_spi_0_component_configuration.pl  --do_build_sim=0  ]
+Info: spi_0: Done RTL generation for module 'NIOSIIe_spi_0'
+Info: spi_0: "NIOSIIe" instantiated altera_avalon_spi "spi_0"
+Info: sw: Starting RTL generation for module 'NIOSIIe_sw'
+Info: sw:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSIIe_sw --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0014_sw_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0014_sw_gen//NIOSIIe_sw_component_configuration.pl  --do_build_sim=0  ]
+Info: sw: Done RTL generation for module 'NIOSIIe_sw'
+Info: sw: "NIOSIIe" instantiated altera_avalon_pio "sw"
+Info: sysid_qsys_0: "NIOSIIe" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: timer_0: Starting RTL generation for module 'NIOSIIe_timer_0'
+Info: timer_0:   Generation command is [exec E:/quartus/quartus/bin64//perl/bin/perl.exe -I E:/quartus/quartus/bin64//perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=NIOSIIe_timer_0 --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0016_timer_0_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0016_timer_0_gen//NIOSIIe_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'NIOSIIe_timer_0'
+Info: timer_0: "NIOSIIe" instantiated altera_avalon_timer "timer_0"
+Info: usb_gpx: Starting RTL generation for module 'NIOSIIe_usb_gpx'
+Info: usb_gpx:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSIIe_usb_gpx --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0017_usb_gpx_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0017_usb_gpx_gen//NIOSIIe_usb_gpx_component_configuration.pl  --do_build_sim=0  ]
+Info: usb_gpx: Done RTL generation for module 'NIOSIIe_usb_gpx'
+Info: usb_gpx: "NIOSIIe" instantiated altera_avalon_pio "usb_gpx"
+Info: usb_rst: Starting RTL generation for module 'NIOSIIe_usb_rst'
+Info: usb_rst:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSIIe_usb_rst --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0018_usb_rst_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0018_usb_rst_gen//NIOSIIe_usb_rst_component_configuration.pl  --do_build_sim=0  ]
+Info: usb_rst: Done RTL generation for module 'NIOSIIe_usb_rst'
+Info: usb_rst: "NIOSIIe" instantiated altera_avalon_pio "usb_rst"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_016: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "NIOSIIe" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "NIOSIIe" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "NIOSIIe" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'NIOSIIe_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec E:/quartus/quartus/bin64//eperlcmd.exe -I E:/quartus/quartus/bin64//perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=NIOSIIe_nios2_gen2_0_cpu --dir=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0021_cpu_gen/ --quartus_bindir=E:/quartus/quartus/bin64/ --verilog --config=C:/Users/Ian/AppData/Local/Temp/alt8967_8236429952668840258.dir/0021_cpu_gen//NIOSIIe_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2021.12.06 13:36:01 (*) Starting Nios II generation
+Info: cpu: # 2021.12.06 13:36:01 (*)   Checking for plaintext license.
+Info: cpu: # 2021.12.06 13:36:02 (*)   Couldn't query license setup in Quartus directory E:/quartus/quartus/bin64/
+Info: cpu: # 2021.12.06 13:36:02 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2021.12.06 13:36:02 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2021.12.06 13:36:02 (*)   Plaintext license not found.
+Info: cpu: # 2021.12.06 13:36:02 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2021.12.06 13:36:02 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2021.12.06 13:36:02 (*)   Creating all objects for CPU
+Info: cpu: # 2021.12.06 13:36:04 (*)   Generating RTL from CPU objects
+Info: cpu: # 2021.12.06 13:36:04 (*)   Creating plain-text RTL
+Info: cpu: # 2021.12.06 13:36:05 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'NIOSIIe_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: sdram_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "sdram_s1_burst_adapter"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file E:/quartus/projects/NES/qsys/NIOSIIe/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: sdram_s1_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "sdram_s1_rsp_width_adapter"
+Info: Reusing file E:/quartus/projects/NES/qsys/NIOSIIe/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file E:/quartus/projects/NES/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file E:/quartus/projects/NES/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_007: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_007"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_007" instantiated error_adapter "error_adapter_0"
+Info: NIOSIIe: Done "NIOSIIe" with 40 modules, 65 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

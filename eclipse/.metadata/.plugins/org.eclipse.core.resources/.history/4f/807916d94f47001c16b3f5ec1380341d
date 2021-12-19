@@ -1,0 +1,10 @@
+int main() {
+
+	volatile unsigned int* LED_PIO = (unsigned int*)0x80;
+	volatile unsigned int* SW_PIO = (unsigned int*)0x60;
+	volatile unsigned int* KEY_PIO = (unsigned int*)0x50;
+	while (1) {
+		*LED_PIO = *SW_PIO;
+	}
+	return 1;
+}

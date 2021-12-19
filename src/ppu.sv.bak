@@ -1,0 +1,21 @@
+module ppu (
+	input [9:0] DrawX,
+	input [9:0] DrawY,
+	output [3:0] VGA_R,
+	output [3:0] VGA_G,
+	output [3:0] VGA_B
+);
+
+always_ff begin
+	if (DrawX < 320) begin
+		VGA_R = 4'd15;
+		VGA_G = 4'd15;
+		VGA_B = 4'd15;
+	end else begin
+		VGA_R = 4'd15;
+		VGA_G = 4'd0;
+		VGA_B = 4'd0;
+	end
+end
+
+endmodule

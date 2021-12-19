@@ -1,0 +1,6 @@
+16:47:48 **** Clean-only build of configuration Nios II for project NES_app_bsp ****
+make clean 
+[BSP clean complete]
+
+16:47:50 Build Finished (took 1s.485ms)
+

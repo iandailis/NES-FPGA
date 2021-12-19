@@ -1,0 +1,4 @@
+module sync(
+	input in,
+	output out
+);
