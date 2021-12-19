@@ -1,6 +1,0 @@
-module controller (
-	input clk,
-	input [15:0] addr,
-	input [7:0] din,
-	output [7:0] dout
-);
