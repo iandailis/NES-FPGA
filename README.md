@@ -44,7 +44,7 @@ Issues:
 - Sprite 0 hit needs more work, flashing detatched backgrounds break the sync.
 - Uses too much RAM. the CPU doesnt need 64kB, it should only need 2 kB RAM and 32 kB of prgrom. 
 - Multi-tile mario top of head doesn't render properly.
-- Tile prefetch when scrolling doesn't work properly.
+- Tile prefetch when scrolling doesn't work properly for the next line.
 - No easy abstraction to implement other mappers.
 - No 8x16 sprite support
 - No PPUMASK support
