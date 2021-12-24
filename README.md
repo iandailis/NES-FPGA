@@ -1,5 +1,5 @@
 # NES-FPGA
-NES emulator in SystemVerilog for an Intel/Altera Max10 FPGA on a Terasic DE-10 Lite.
+NES (Nintendo Entertainment System) emulator in SystemVerilog for an Intel/Altera Max10 FPGA on a Terasic DE-10 Lite.
 
 https://en.wikipedia.org/wiki/Nintendo_Entertainment_System
 
