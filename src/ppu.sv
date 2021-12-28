@@ -114,7 +114,6 @@ always_ff @ (posedge cpu_clk) begin	// REGISTERS
 				3'h2 :	/* PPUSTATUS */
 					begin
 						dout <= PPUSTATUS;
-//						PPUSTATUS[7] <= 0;	/* NOT CLEARING, IDK HOW TO RESOLVE THE MULT DRIVERS */
 						addr_latch <= 0;
 					end
 				3'h4 :
@@ -129,16 +128,25 @@ always_ff @ (posedge cpu_clk) begin	// REGISTERS
 					end
 			endcase
 		end
-	end		
+	end
+
+	if (DrawY == 480) begin
+		PPUSTATUS[7] <= 1;
+	end else if ((16'h2000 <= addr && addr <= 16'h3FFF && addr[2:0] == 3'h2) || ~v_blank) begin
+		PPUSTATUS[7] <= 0;
+	end
+	
 end
 
 always_comb begin	/* REGISTERS COMB */
-	PPUSTATUS[7] = v_blank;
 	PPUSTATUS[4:0] = PPUDATA[4:0];
 	
 	oam_addr1 = OAMADDR;
 	oam_din1 = OAMDATA;
 	oam_readdata = oam_dout1;
+	
+	debug = 0;
+	
 end
 
 
@@ -184,14 +192,16 @@ always_ff @ (posedge nes_clk) begin
 end
 
 logic [15:0] vaddr0_mirror;
+logic [15:0] vaddr0;
 
 always_comb begin
 
 	vram_wren0 = 0;
 	vram_din0 = PPUDATA;
 	vram_addr0 = 0;
+	vaddr0_mirror = 0;
 	
-	vaddr0_mirror = addr_final & 16'h2FFF;	/* MIRORRS UPPER RANGE */ 
+	vaddr0 = addr_final & 16'h2FFF;	/* MIRORRS UPPER RANGE */ 
 	
 	chr_addr0 = 0;
 	
@@ -205,27 +215,17 @@ always_comb begin
 		
 //		/* VERTICAL MIRROR */
 	
-		if (16'h2000 <= vaddr0_mirror && vaddr0_mirror < 16'h2400) begin				/* nt1 */
-			vram_addr0 = vaddr0_mirror - 16'h2000;
-		end else if (16'h2400 <= vaddr0_mirror && vaddr0_mirror < 16'h2800) begin	/* nt2 */ 
-			vram_addr0 = vaddr0_mirror - 16'h2000;
-		end else if (16'h2800 <= vaddr0_mirror && vaddr0_mirror < 16'h2C00) begin	/* MIRROR TO nt1 */
-			vram_addr0 = vaddr0_mirror - 16'h2800;
+		if (16'h2000 <= vaddr0 && vaddr0 < 16'h2400) begin				/* nt1 */
+			vaddr0_mirror = vaddr0 - 16'h2000;
+		end else if (16'h2400 <= vaddr0 && vaddr0 < 16'h2800) begin	/* nt2 */ 
+			vaddr0_mirror = vaddr0 - 16'h2000;
+		end else if (16'h2800 <= vaddr0 && vaddr0 < 16'h2C00) begin	/* MIRROR TO nt1 */
+			vaddr0_mirror = vaddr0 - 16'h2800;
 		end else begin																					/* MIRROR TO nt2 */
-			vram_addr0 = vaddr0_mirror - 16'h2800;
+			vaddr0_mirror = vaddr0 - 16'h2800;
 		end
 		
-		/* HORIZONTAL MIRROR */
-		
-//		if (16'h2000 <= vaddr0_mirror && vaddr0_mirror < 16'h2400) begin				/* nt1 */
-//			vram_addr0 = vaddr0_mirror - 16'h2000;
-//		end else if (16'h2400 <= vaddr0_mirror && vaddr0_mirror < 16'h2800) begin	/* MIRROR TO nt1 */ 
-//			vram_addr0 = vaddr0_mirror - 16'h2400;
-//		end else if (16'h2800 <= vaddr0_mirror && vaddr0_mirror < 16'h2C00) begin	/* nt2 */
-//			vram_addr0 = vaddr0_mirror - 16'h2400;
-//		end else begin																					/* MIRROR TO nt2 */
-//			vram_addr0 = vaddr0_mirror - 16'h2800;
-//		end
+		vram_addr0 = vaddr0_mirror[10:0];
 			
 	end
 
@@ -332,46 +332,54 @@ always_comb begin
 	y_final = DrawY + {scroll_y, 1'b0};
 	
 	chr_addr1 = 0;
-	nextline = y_final + 1;
+	nextline = y_final + 1'd1;
 	nexttile = x_final + 5'b10000;
-	if (0 <= DrawX && DrawX <= 512 || DrawX >= 768) begin
+	if (0 <= DrawX && DrawX < 512 || DrawX >= 768) begin
 		case (x_final[3:2])
 			2'h0 :	/* NAMETABLE ADDR */
 				begin
 					if (DrawX > 512) begin
-						vram_addr_tile = {nextline[8:4], 5'h00} + scroll_x[7:3];
+						vram_addr_tile = {nextline[8:4], scroll_x[7:3]};
 					end else begin	
-						if (x_final + 16 >= 512) begin
+						if (x_final + 16 >= 512) begin	/* fetch at next nametable */
 							if (x_final + 16 < 528) begin
-								vram_addr_tile = {y_final[8:4], x_final[8:4]} + 1 + 16'h0400 - 32;
+								vram_addr_tile = {y_final[8:4], x_final[8:4]} + 1'd1 + 11'h0400 - 6'd32;
 							end else begin
-								vram_addr_tile = {y_final[8:4], x_final[8:4]} + 1 + 16'h0400;
+								vram_addr_tile = {y_final[8:4], x_final[8:4]} + 1'd1 + 11'h0400;
 							end
 						end else begin
-							vram_addr_tile = {y_final[8:4], x_final[8:4]} + 1;
+							vram_addr_tile = {y_final[8:4], x_final[8:4]} + 1'd1;
 						end	
 					end
 				end
 			2'h1 :	/* ATTRIBUTE TABLE ADDR */
 				begin
 					if (DrawX > 512) begin
-						vram_addr_attr = 16'h03C0 + ((nextline[8:6]) * 8) + scroll_x[7:5];
+						vram_addr_attr = 11'h03C0 + (nextline[8:6] * 4'd8) + scroll_x[7:5];
 					end else begin
-						if (x_final + 16 >= 512) begin
-							vram_addr_attr = 16'h03C0 + nexttile[8:6] + (y_final[8:6] * 8) + 16'h0400;
+						if (x_final + 10'd16 >= 512) begin
+							vram_addr_attr = 11'h03C0 + nexttile[8:6] + (y_final[8:6] * 4'd8) + 11'h0400;
 						end else begin
-							vram_addr_attr = 16'h03C0 + nexttile[8:6] + (y_final[8:6] * 8);
+							vram_addr_attr = 11'h03C0 + nexttile[8:6] + (y_final[8:6] * 4'd8);
 						end
 						
 					end
 				end
 			2'h2 :
 				begin
-					chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 16 + y_final[3:1] - 16;
+					if (DrawX > 512) begin
+						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + nextline[3:1] - 5'd16;
+					end else begin
+						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + y_final[3:1] - 5'd16;
+					end
 				end
 			2'h3 :
 				begin
-					chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 16 + y_final[3:1] - 8;
+					if (DrawX > 512) begin
+						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + nextline[3:1] - 4'd8;
+					end else begin
+						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + y_final[3:1] - 4'd8;
+					end
 				end
 		endcase
 	end else begin
@@ -380,17 +388,17 @@ always_comb begin
 				1'b0 :
 					begin
 						if (sprite_attr[DrawX[4:2]][7]) begin
-							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 16) + (7 - (DrawY[8:1] - sprite_y[DrawX[4:2]])) - 16;
+							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (3'd7 - (DrawY[8:1] - sprite_y[DrawX[4:2]])) - 5'd16;
 						end else begin
-							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 16) + (DrawY[8:1] - sprite_y[DrawX[4:2]]) - 16;
+							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (DrawY[8:1] - sprite_y[DrawX[4:2]]) - 5'd16;
 						end
 					end
 				1'b1 :
 					begin
 						if (sprite_attr[DrawX[4:2]][7]) begin
-							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 16) + (7 - (DrawY[8:1] - sprite_y[DrawX[4:2]])) - 8;
+							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (3'd7 - (DrawY[8:1] - sprite_y[DrawX[4:2]])) - 4'd8;
 						end else begin
-							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 16) + (DrawY[8:1] - sprite_y[DrawX[4:2]]) - 8;
+							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (DrawY[8:1] - sprite_y[DrawX[4:2]]) - 4'd8;
 						end
 					end
 			endcase
@@ -399,92 +407,47 @@ always_comb begin
 	
 		/* VERTICAL MIRROR */
 		
-		if (vram_addr_tile) begin
-		
-			case (PPUCTRL[1:0])
-				2'b00 :
-					begin
-						vram_addr1 = vram_addr_tile;
-					end
-				2'b01 :
-					begin
-						vram_addr1 = 16'h0400 + vram_addr_tile;
-					end
-				2'b10 :
-					begin
-						vram_addr1 = vram_addr_tile;
-					end
-				2'b11 :
-					begin
-						vram_addr1 = 16'h0400 + vram_addr_tile;
-					end
-			endcase
-		
-		end else if (vram_addr_attr) begin
-			case (PPUCTRL[1:0])
-				2'b00 :
-					begin
-						vram_addr1 = vram_addr_attr;
-					end
-				2'b01 :
-					begin
-						vram_addr1 = 16'h0400 + vram_addr_attr;
-					end
-				2'b10 :
-					begin
-						vram_addr1 = vram_addr_attr;
-					end
-				2'b11 :
-					begin
-						vram_addr1 = 16'h0400 + vram_addr_attr;
-					end
-			endcase
-		end
-
-		/* HORIZONTAL MIRROR (not really working yet) */
-		
-//		if (vram_addr_tile) begin
-//		
-//			case (PPUCTRL[1:0])
-//				2'b00 :
-//					begin
-//						vram_addr1 = vram_addr_tile;
-//					end
-//				2'b01 :
-//					begin
-//						vram_addr1 = vram_addr_tile;
-//					end
-//				2'b10 :
-//					begin
-//						vram_addr1 = 16'h0400 + vram_addr_tile;
-//					end
-//				2'b11 :
-//					begin
-//						vram_addr1 = 16'h0400 + vram_addr_tile;
-//					end
-//			endcase
-//		
-//		end else if (vram_addr_attr) begin
-//			case (PPUCTRL[1:0])
-//				2'b00 :
-//					begin
-//						vram_addr1 = vram_addr_attr;
-//					end
-//				2'b01 :
-//					begin
-//						vram_addr1 = vram_addr_attr;
-//					end
-//				2'b10 :
-//					begin
-//						vram_addr1 = 16'h0400 + vram_addr_attr;
-//					end
-//				2'b11 :
-//					begin
-//						vram_addr1 = 16'h0400 + vram_addr_attr;
-//					end
-//			endcase
-//		end
-
+	if (vram_addr_tile) begin
+	
+		case (PPUCTRL[1:0])
+			2'b00 :
+				begin
+					vram_addr1 = vram_addr_tile;
+				end
+			2'b01 :
+				begin
+					vram_addr1 = 11'h0400 + vram_addr_tile;
+				end
+			2'b10 :
+				begin
+					vram_addr1 = vram_addr_tile;
+				end
+			2'b11 :
+				begin
+					vram_addr1 = 11'h0400 + vram_addr_tile;
+				end
+		endcase
+	
+	end else if (vram_addr_attr) begin
+		case (PPUCTRL[1:0])
+			2'b00 :
+				begin
+					vram_addr1 = vram_addr_attr;
+				end
+			2'b01 :
+				begin
+					vram_addr1 = 11'h0400 + vram_addr_attr;
+				end
+			2'b10 :
+				begin
+					vram_addr1 = vram_addr_attr;
+				end
+			2'b11 :
+				begin
+					vram_addr1 = 11'h0400 + vram_addr_attr;
+				end
+		endcase
+	end
 end		
 
 logic [3:0] sprite_size;
@@ -551,7 +514,7 @@ always_ff @ (posedge vga_clk) begin	/* SPRITE EVALUATION */
 				begin
 					if (sprite_add) begin
 						sprite_x_next[sprite_count_next] <= oam_dout0;
-						sprite_count_next <= sprite_count_next + 1;
+						sprite_count_next <= sprite_count_next + 1'd1;
 						sprite_add <= 0;
 					end
 				end
@@ -724,7 +687,7 @@ always_comb begin
 	end
 
 	if (DrawX[8:1] == 88 && DrawY[8:1] == 30) begin	/* SMB ZHIT */
-		sprite_zhit = 1;
+		sprite_zhit = 1'b1;
 	end
 	
 //	if (DrawX[8:1] == 2 && DrawY[8:1] == 64) begin	/* KUNG FU ZHIT, NMI TIMING WRONG THOUGH */

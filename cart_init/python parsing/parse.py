@@ -38,7 +38,7 @@ def main():
 				curChar = f.read(1)
 
 		c.write("WIDTH=8;\n")
-		c.write("DEPTH=65536;\n")
+		c.write("DEPTH=8192;\n")
 		c.write("\n")
 		c.write("ADDRESS_RADIX=HEX;\n")
 		c.write("DATA_RADIX=HEX;\n")
@@ -53,6 +53,8 @@ def main():
 				curChar = f.read(1)
 			if (curChar == '' or address >= 0x2000):
 				print("{:02X}".format(address))
+				if (address < 0x2000):
+					c.write("\t[" + "{:02X}".format(address-1) + "..1FFF] : 00;\n")
 				c.write("END;\n") 
 				break
 			curChar = f.read(1)

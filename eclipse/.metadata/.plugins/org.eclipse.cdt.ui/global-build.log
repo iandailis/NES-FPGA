@@ -6734,3 +6734,27 @@ Info: Building E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
 E:/quartus/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
 [BSP build complete]
 [NIOSIIe_app build complete]
+15:02:34 **** Incremental Build of configuration Nios II for project NIOSIIe_app ****
+make all 
+Info: Building E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
+E:/quartus/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
+[BSP build complete]
+[NIOSIIe_app build complete]
+16:47:53 **** Incremental Build of configuration Nios II for project NIOSIIe_app ****
+make all 
+Info: Building E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
+E:/quartus/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
+[BSP build complete]
+[NIOSIIe_app build complete]
+02:47:23 **** Incremental Build of configuration Nios II for project NIOSIIe_app ****
+make all 
+Info: Building E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
+E:/quartus/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
+[BSP build complete]
+[NIOSIIe_app build complete]
+21:01:40 **** Incremental Build of configuration Nios II for project NIOSIIe_app ****
+make all 
+Info: Building E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
+E:/quartus/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C E:/quartus/projects/NES/software/NIOSIIe_app_bsp/
+[BSP build complete]
+[NIOSIIe_app build complete]

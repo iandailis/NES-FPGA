@@ -240,7 +240,7 @@ logic [15:0] dma_ram_addr;
 logic [7:0] dma_oam_addr;
 initial begin
 	dma = 0;
-	dma_finish = 1;
+	dma_finish = 1'b1;
 end
 always_ff @ (posedge cpu_clk) begin
 	dma = ~dma_finish;
@@ -258,15 +258,15 @@ always_ff @ (posedge nes_clk) begin
 		if (dma_count == 10'h200) begin
 			dma_finish <= 1;
 		end else begin
-			dma_count <= dma_count + 1;
+			dma_count <= dma_count + 1'd1;
 			case (dma_count[0])
 				1'b0 :
 					begin
-						dma_ram_addr <= dma_ram_addr + 1;
+						dma_ram_addr <= dma_ram_addr + 1'd1;
 					end
 				1'b1:
 					begin
-						dma_oam_addr <= dma_oam_addr + 1;
+						dma_oam_addr <= dma_oam_addr + 1'd1;
 					end
 			endcase
 		end
@@ -286,9 +286,9 @@ always_comb begin
 		oam_addr1 = dma_oam_addr;
 		oam_din1 = ram_dout;
 		if (dma_count < 10'h200) begin
-			oam_wren1 = 1;
+			oam_wren1 = 1'd1;
 		end else begin
-			oam_wren1 = 0;
+			oam_wren1 = 1'd0;
 		end
 		
 	end else begin
