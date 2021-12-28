@@ -12,14 +12,14 @@ Folders:
 * software: C source code for the USB controller.
 * src: Hardware description of the NES.
 
-To load a game (by default the emulator loads Super Mario Bros):
+To load a game (optional, by default the emulator loads Super Mario Bros):
 1. Download a NES ROM.
-2. Create a hex dump of the ROM using VSCode.
-3. Figure out the mapper information from the iNES header (https://wiki.nesdev.org/w/index.php/INES).
-4. Change the input file and the starting address in cart_init/python parsing/parse.py
-5. Run the python parser with "python parse.py"
+2. Create a hex dump of the ROM using VSCode. 
+3. Delete the first line with offset information.
+4. Place the dump into cart_init/python parsing/dumps and name it [game_name_no_spaces]_dump.txt
+5. Run the python parser with "python parse.py [game_name_no_spaces]"
 
-To use a provided ROM, change the source file and the starting address in the python parser to the address specified in CONFIG.txt, then run the parser.
+This initializes prg.mif and chr.mif, which is used by Quartus to initialize the cartridge roms. Look at the provided dumps to see the expected format for the parser. The iNES header should be the first line of the dump.
 
 To run:
 1. Open NES.qpf in Intel Quartus (tested on version 18.1).
@@ -43,9 +43,8 @@ Issues:
 - No audio support.
 - Sprite 0 hit needs more work, flashing detatched backgrounds break the sync.
 - Uses too much RAM. the CPU doesnt need 64kB, it should only need 2 kB RAM and 32 kB of prgrom. 
-- Multi-tile mario top of head doesn't render properly.
-- Tile prefetch when scrolling doesn't work properly for the first tile in a line
-- No easy abstraction to implement other mappers.
+- Second tile in the line is incorrect when scrolling
+- Only supports mapper 0 (NROM) with vertical mirroring, and many other mapper specifics are also unsupported.
 - No 8x16 sprite support
 - No PPUMASK support
 
