@@ -368,17 +368,17 @@ always_comb begin
 			2'h2 :
 				begin
 					if (DrawX > 512) begin
-						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + nextline[3:1] - 5'd16;
+						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + nextline[3:1];
 					end else begin
-						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + y_final[3:1] - 5'd16;
+						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + y_final[3:1];
 					end
 				end
 			2'h3 :
 				begin
 					if (DrawX > 512) begin
-						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + nextline[3:1] - 4'd8;
+						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + nextline[3:1] + 4'd8;
 					end else begin
-						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + y_final[3:1] - 4'd8;
+						chr_addr1 = {PPUCTRL[4], 12'h000} + next_chr * 5'd16 + y_final[3:1] + 4'd8;
 					end
 				end
 		endcase
@@ -388,17 +388,17 @@ always_comb begin
 				1'b0 :
 					begin
 						if (sprite_attr[DrawX[4:2]][7]) begin
-							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (3'd7 - (DrawY[8:1] - sprite_y[DrawX[4:2]])) - 5'd16;
+							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (3'd7 - (DrawY[8:1] - sprite_y[DrawX[4:2]]));
 						end else begin
-							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (DrawY[8:1] - sprite_y[DrawX[4:2]]) - 5'd16;
+							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (DrawY[8:1] - sprite_y[DrawX[4:2]]);
 						end
 					end
 				1'b1 :
 					begin
 						if (sprite_attr[DrawX[4:2]][7]) begin
-							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (3'd7 - (DrawY[8:1] - sprite_y[DrawX[4:2]])) - 4'd8;
+							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (3'd7 - (DrawY[8:1] - sprite_y[DrawX[4:2]])) + 4'd8;
 						end else begin
-							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (DrawY[8:1] - sprite_y[DrawX[4:2]]) - 4'd8;
+							chr_addr1 = {PPUCTRL[3], 12'h000} + (sprite_tile[DrawX[4:2]] * 5'd16) + (DrawY[8:1] - sprite_y[DrawX[4:2]]) + 4'd8;
 						end
 					end
 			endcase

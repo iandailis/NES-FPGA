@@ -12,18 +12,12 @@ def main():
 		curChar = 'F'
 		word = ""
 		address = 0x8000
-		if (address > 0):
-			p.write("\t[0.." + "{:02X}".format(address-1) + "] : 00;\n")
-
+		p.write("\t[0.." + "{:02X}".format(address-1) + "] : 00;\n")
 		while (curChar != '\n'):	# skip first line
 			curChar = f.read(1)
 		while True:
 			while (curChar != ':' and curChar != ''):
 				curChar = f.read(1)
-			if (curChar == '' or address >= 0xFFFF):
-				print("{:02X}".format(address))
-				p.write("END;\n") 
-				break
 			curChar = f.read(1)
 			for i in range(16):
 				word = ""
@@ -36,6 +30,10 @@ def main():
 				address+=1
 			while (curChar != '\n' and curChar != ''):
 				curChar = f.read(1)
+			if (curChar == '' or address >= 0xFFFF):
+				print("{:02X}".format(address))
+				p.write("END;\n") 
+				break
 
 		c.write("WIDTH=8;\n")
 		c.write("DEPTH=8192;\n")
@@ -51,12 +49,6 @@ def main():
 		while True:
 			while (curChar != ':' and curChar != ''):
 				curChar = f.read(1)
-			if (curChar == '' or address >= 0x2000):
-				print("{:02X}".format(address))
-				if (address < 0x2000):
-					c.write("\t[" + "{:02X}".format(address-1) + "..1FFF] : 00;\n")
-				c.write("END;\n") 
-				break
 			curChar = f.read(1)
 			for i in range(16):
 				word = ""
@@ -69,5 +61,10 @@ def main():
 				address+=1
 			while (curChar != '\n' and curChar != ''):
 				curChar = f.read(1)
+			if (curChar == '' or address >= 0x2000):
+				print("{:02X}".format(address))
+				c.write("END;\n") 
+				break
+
 if (__name__ == "__main__"):
 	main()	
