@@ -16,8 +16,8 @@ To load a game (optional, by default the emulator loads Super Mario Bros):
 1. Download a NES ROM.
 2. Create a hex dump of the ROM using VSCode. 
 3. Delete the first line with offset information.
-4. Place the dump into cart_init/python parsing/dumps and name it [game_name_no_spaces]_dump.txt
-5. Go to cart_init/python parsing and run the python parser with "python parse.py [game_name_no_spaces]"
+4. Place the dump into cart_init/python parsing/dumps and name it [dump_name_no_spaces]_dump.txt
+5. Go to cart_init/python parsing and run the python parser with "python parse.py [dump_name_no_spaces]"
 
 This initializes prg.mif and chr.mif, which is used by Quartus to initialize the cartridge roms. Look at the provided dumps to see the expected format for the parser. The iNES header should be the first line of the dump.
 
