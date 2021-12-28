@@ -336,7 +336,7 @@ always_comb begin
 		cpu_din = databus;	/* READING */
 	end
 	
-	cpu_reset = SW_sync[0];
+	cpu_reset = KEY_sync[0];
 	cpu_enable = ~dma;
 	cpu_rdy = 1'b1;
 	cpu_irq = 1'b1;
