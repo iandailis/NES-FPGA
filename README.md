@@ -5,7 +5,7 @@ https://en.wikipedia.org/wiki/Nintendo_Entertainment_System
 
 Uses a custom I/O expansion board with a MAX3421E USB controller for keyboard support.
 
-I made everything except for the 6502 CPU core which I took from a previous revision of the MISTer NES (which they adapted from opencores.org).
+I made everything except for the 6502 CPU core which I took from a previous revision of the MISTer NES (which they adapted from opencores.org), and I adapted some assets provided by my university that I used in previous projects (src/VGA_Controller.sv, src/HexDriver.sv, and the MAX3421E USB controller driver).
 
 Folders:
 * cart_init: Cartridge initialization, includes a python parser that generates prg.mif and chr.mif using a provided hex dump.
