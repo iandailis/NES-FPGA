@@ -8,8 +8,7 @@ Uses a custom I/O expansion board with a MAX3421E USB controller for keyboard su
 Folders:
 * cart_init: Cartridge initialization, includes a python parser that generates prg.mif and chr.mif using a provided hex dump.
 * eclipse: Working directory for the USB controller programmed in C.
-* qsys: Generated files for the NIOS-IIe and the PLLs.
-* software: C source code for the USB controller.
+* qsys: Generated files for the NIOS-IIe and the PLLs, and C source code for the usb controller
 * src: Hardware description of the NES.
 
 To load a game (optional, by default the emulator loads Super Mario Bros):
