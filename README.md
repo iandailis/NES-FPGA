@@ -8,10 +8,10 @@ Uses a custom I/O expansion board with a MAX3421E USB controller for keyboard su
 I made everything except for the 6502 CPU core which I took from a previous revision of the MISTer NES (which they adapted from opencores.org), and I adapted some assets provided by my university (VGA display controller, Hex display driver, and the MAX3421E USB controller driver).
 
 Folders:
-* cart_init: Cartridge initialization, includes a python parser that generates prg.mif and chr.mif using a provided hex dump.
-* eclipse: Working directory for the USB controller programmed in C.
-* qsys: Generated files for the NIOS-IIe and the PLLs, and C source code for the usb controller
-* src: Hardware description of the NES.
+- cart_init: Cartridge initialization, includes a python parser that generates prg.mif and chr.mif using a provided hex dump.
+- eclipse: Working directory for the USB controller programmed in C.
+- qsys: Generated files for the NIOS-IIe and the PLLs, and C source code for the usb controller
+- src: Hardware description of the NES.
 
 To load a game (optional, by default the emulator loads Super Mario Bros):
 1. Download a NES ROM.
@@ -43,7 +43,7 @@ Issues:
 - No vertical scrolling.
 - No audio support.
 - Sprite 0 hit needs more work, flashing detatched backgrounds break the sync.
-- Uses too much RAM. the CPU doesnt need 64kB, it should only need 2 kB RAM and 32 kB of prgrom. 
+- CPU uses too much RAM. The CPU only needs a 2 kB RAM and a 32 kB program ROM, currently it uses a 64kB RAM for everything. 
 - Second tile in the line is incorrect when scrolling
 - Only supports mapper 0 (NROM) with vertical mirroring, and many other mapper specifics are also unsupported.
 - No 8x16 sprite support
