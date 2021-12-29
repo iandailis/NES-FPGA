@@ -5,6 +5,8 @@ https://en.wikipedia.org/wiki/Nintendo_Entertainment_System
 
 Uses a custom I/O expansion board with a MAX3421E USB controller for keyboard support.
 
+I made everything except for the 6502 CPU core which I took from a previous revision of the MISTer NES (which they adapted from opencores.org).
+
 Folders:
 * cart_init: Cartridge initialization, includes a python parser that generates prg.mif and chr.mif using a provided hex dump.
 * eclipse: Working directory for the USB controller programmed in C.
