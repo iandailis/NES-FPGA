@@ -26,7 +26,7 @@ To run:
 2. Compile.
 3. Program the FPGA.
 5. Launch NIOS-II Build Tools for Eclipse, with working directory eclipse/
-6. Press "Run Configurations" then "Run" 
+6. Mouse over "Run" then press "Run Configurations" then press "Run" 
 
 Once the hex displays or the NIOS-II console is showing the pressed keycodes, you can begin to play!
 

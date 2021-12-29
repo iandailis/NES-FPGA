@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=E\:\\quartus\\projects\\NES\\software\\NIOSIIe_app
+newSoftwareExampleWizardPage.defaultLocation=E\:\\quartus\\projects\\NES\\qsys\\software\\usb_controller
 newSoftwareExampleWizardPage.sopcinfoFile=E\:\\quartus\\projects\\NES\\qsys\\NIOSIIe.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=E\:\\quartus\\projects\\NES\\software\\NIOSIIe_app_bsp
+newSoftwareExampleWizardPage2.newBspLocation=E\:\\quartus\\projects\\NES\\qsys\\software\\usb_controller_bsp

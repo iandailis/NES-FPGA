@@ -4,7 +4,7 @@
 <stringAttribute key="byteStreamDeviceDeviceID" value="1"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
 <booleanAttribute key="downloadProgram" value="true"/>
-<stringAttribute key="elfFile" value="E:\quartus\projects\NES\software\NIOSIIe_app\NIOSIIe_app.elf"/>
+<stringAttribute key="elfFile" value="E:\quartus\projects\NES\qsys\software\usb_controller\usb_controller.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.altera.debug.cdi.gdb.plugin.Nios2GdbCdiDebugger"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
@@ -12,8 +12,8 @@
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
 <booleanAttribute key="org.eclipse.cdt.launch.ENABLE_REGISTER_BOOKKEEPING" value="false"/>
 <booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="NIOSIIe_app.elf"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="NIOSIIe_app"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="usb_controller.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="usb_controller"/>
 <stringAttribute key="processorCableName" value="USB-Blaster on localhost [USB-0]"/>
 <stringAttribute key="processorDeviceIndex" value="1"/>
 <stringAttribute key="processorInstanceId" value="0"/>
