@@ -2,6 +2,7 @@ db/
 incremental_db/
 output_files/
 *.bak
+*.qws
 eclipse/*
 !eclipse\.metadata\.plugins\org.eclipse.core.resources
 !eclipse\.metadata\.plugins\org.eclipse.core.runtime
