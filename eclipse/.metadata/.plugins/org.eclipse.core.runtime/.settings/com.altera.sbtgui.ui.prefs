@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=E\:\\quartus\\projects\\NES\\qsys\\software\\usb_controller
-newSoftwareExampleWizardPage.sopcinfoFile=E\:\\quartus\\projects\\NES\\qsys\\NIOSIIe.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=E\:\\quartus\\projects\\NES\\qsys\\software\\usb_controller_bsp
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\Ian\\Documents\\code\\verilog\\NES-FPGA\\qsys\\software\\usb_controller
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\Ian\\Documents\\code\\verilog\\NES-FPGA\\qsys\\NIOSIIe.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\Ian\\Documents\\code\\verilog\\NES-FPGA\\qsys\\software\\usb_controller_bsp

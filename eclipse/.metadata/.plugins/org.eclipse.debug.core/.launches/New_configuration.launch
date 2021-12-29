@@ -4,7 +4,7 @@
 <stringAttribute key="byteStreamDeviceDeviceID" value="1"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
 <booleanAttribute key="downloadProgram" value="true"/>
-<stringAttribute key="elfFile" value="E:\quartus\projects\NES\qsys\software\usb_controller\usb_controller.elf"/>
+<stringAttribute key="elfFile" value="C:\Users\Ian\Documents\code\verilog\NES-FPGA\qsys\software\usb_controller\usb_controller.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.altera.debug.cdi.gdb.plugin.Nios2GdbCdiDebugger"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
