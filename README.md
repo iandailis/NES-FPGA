@@ -34,10 +34,10 @@ Once the hex displays or the NIOS-II console is showing the pressed keycodes, yo
 Controls:
 - KEY[0]: CPU Reset
 - WASD: Arrow keys
-- J: A
+- G: Select
+- H: Start
 - K: B
-- I: Select
-- O: Start
+- L: A
 
 Issues:
 - No vertical scrolling.

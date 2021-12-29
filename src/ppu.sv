@@ -132,7 +132,7 @@ always_ff @ (posedge cpu_clk) begin	// REGISTERS
 
 	if (DrawY == 480) begin
 		PPUSTATUS[7] <= 1;
-	end else if ((16'h2000 <= addr && addr <= 16'h3FFF && addr[2:0] == 3'h2) || ~v_blank) begin
+	end else if ((16'h2000 <= addr && addr <= 16'h3FFF && addr[2:0] == 3'h2) || DrawY == 520) begin
 		PPUSTATUS[7] <= 0;
 	end
 	
@@ -547,8 +547,6 @@ logic [5:0] palette_mem_addr;
 logic msb_b, lsb_b;
 logic msb_s [8], lsb_s [8];
 
-logic sprite_zhit, sprite_zhit_sync;
-
 always_comb begin
 	
 	paletteID_s[0] = 0;
@@ -565,8 +563,6 @@ always_comb begin
 	
 	pixel = {msb_b, lsb_b};
 	paletteID = paletteID_b;
-	
-	sprite_zhit = 0;
 	
 	msb_s[0] = 0;
 	msb_s[1] = 0;
@@ -685,14 +681,6 @@ always_comb begin
 			end
 			paletteID_s[7] = {1'b1, sprite_attr[7][1:0]};
 	end
-
-	if (DrawX[8:1] == 88 && DrawY[8:1] == 30) begin	/* SMB ZHIT */
-		sprite_zhit = 1'b1;
-	end
-	
-//	if (DrawX[8:1] == 2 && DrawY[8:1] == 64) begin	/* KUNG FU ZHIT, NMI TIMING WRONG THOUGH */
-//		sprite_zhit = 1;
-//	end
 	
 	if (msb_s[0] || lsb_s[0]) begin
 		if (~(sprite_attr[0][5] && (msb_b || lsb_b))) begin
@@ -744,16 +732,21 @@ always_comb begin
 	end
 end
 
-always_ff @ (posedge nes_clk) begin
-	PPUSTATUS[6] <= sprite_zhit_sync;
+logic sprite_zhit;
+
+always_ff @ (posedge ppu_clk) begin
+	PPUSTATUS[6] <= sprite_zhit;
 end
 
 always_ff @ (posedge vga_clk) begin
-	if (sprite_zhit) begin
-		sprite_zhit_sync <= 1;
-	end else if (DrawY == 500) begin
-		sprite_zhit_sync <= 0;
+	
+	if (DrawX[8:1] == 88 && DrawY[8:1] == 30) begin	/* SMB ZHIT */
+//	if (DrawX[8:1] == 2 && DrawY[8:1] == 0) begin	/* KUNG FU ZHIT, NMI TIMING WRONG THOUGH */
+		sprite_zhit <= 1;
+	end else if (DrawY == 520) begin
+		sprite_zhit <= 0;
 	end
+
 	if (v_blank || h_blank) begin	/* hide glitch on first pixel */
 		VGA_R <= 4'h0;
 		VGA_G <= 4'h0;
@@ -779,11 +772,11 @@ VGA_Controller VGA_Controller (
 	.DrawY	(DrawY)
 );
 
-always_comb begin	
-	if (v_blank && PPUCTRL[7]) begin
-		nmi = 1;
+always_ff @ (posedge ppu_clk) begin	
+	if (DrawY[8:1] == 240 && PPUCTRL[7]) begin
+		nmi <= 1;
 	end else begin
-		nmi = 0;
+		nmi <= 0;
 	end
 end
 

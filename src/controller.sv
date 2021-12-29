@@ -42,7 +42,7 @@ always_comb begin
 	begin
 		controller_din[0] = 1;
 	end
-	if (keycode[31:24] == 8'h0D || keycode[23:16] == 8'h0D || keycode[15:8] == 8'h0D || keycode[7:0] == 8'h0D) /* J --> A */
+	if (keycode[31:24] == 8'h0F || keycode[23:16] == 8'h0F || keycode[15:8] == 8'h0F || keycode[7:0] == 8'h0F) /* L --> A */
 	begin
 		controller_din[7] = 1;
 	end
@@ -50,11 +50,11 @@ always_comb begin
 	begin
 		controller_din[6] = 1;
 	end
-	if (keycode[31:24] == 8'h0C || keycode[23:16] == 8'h0C || keycode[15:8] == 8'h0C || keycode[7:0] == 8'h0C) /* I --> SELECT */
+	if (keycode[31:24] == 8'h0A || keycode[23:16] == 8'h0A || keycode[15:8] == 8'h0A || keycode[7:0] == 8'h0A) /* G --> SELECT */
 	begin
 		controller_din[5] = 1;
 	end
-	if (keycode[31:24] == 8'h12 || keycode[23:16] == 8'h12 || keycode[15:8] == 8'h12 || keycode[7:0] == 8'h12) /* O --> START */
+	if (keycode[31:24] == 8'h0B || keycode[23:16] == 8'h0B || keycode[15:8] == 8'h0B || keycode[7:0] == 8'h0B) /* H --> START */
 	begin
 		controller_din[4] = 1;
 	end
