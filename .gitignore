@@ -2,3 +2,8 @@ db/
 incremental_db/
 output_files/
 *.bak
+eclipse/*
+!eclipse\.metadata\.plugins\org.eclipse.core.resources
+!eclipse\.metadata\.plugins\org.eclipse.core.runtime
+!eclipse\.metadata\.plugins\org.eclipse.debug.core
+!eclipse\.metadata\.plugins\org.eclipse.debug.ui
