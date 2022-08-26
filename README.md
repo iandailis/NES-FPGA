@@ -9,7 +9,7 @@ I made everything except for the 6502 CPU core which I took from a previous revi
 
 ![Project Image](https://github.com/iandailis/NES-FPGA/blob/main/docs/IMG_20220826_020011.jpg)
 ![Project Image](https://github.com/iandailis/NES-FPGA/blob/main/docs/IMG_20220826_021004.jpg)
-![Project Image](https://github.com/iandailis/NES-FPGA/blob/main/docs/resources.jpg)
+![Project Image](https://github.com/iandailis/NES-FPGA/blob/main/docs/resources.JPG)
 
 Folders:
 - cart_init: Cartridge initialization, includes a python parser that generates prg.mif and chr.mif using a provided hex dump.
