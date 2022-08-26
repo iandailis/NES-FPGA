@@ -7,6 +7,10 @@ Uses a custom I/O expansion board with a MAX3421E USB controller for keyboard su
 
 I made everything except for the 6502 CPU core which I took from a previous revision of the MISTer NES (which they adapted from opencores.org), and I adapted some assets provided by my university (VGA display controller, Hex display driver, and the MAX3421E USB controller driver).
 
+![Project Image](https://github.com/iandailis/NES-FPGA/blob/main/docs/IMG_20220826_020011.jpg)
+![Project Image](https://github.com/iandailis/NES-FPGA/blob/main/docs/IMG_20220826_021004.jpg)
+![Project Image](https://github.com/iandailis/NES-FPGA/blob/main/docs/resources.jpg)
+
 Folders:
 - cart_init: Cartridge initialization, includes a python parser that generates prg.mif and chr.mif using a provided hex dump.
 - eclipse: Working directory for the USB controller programmed in C.
